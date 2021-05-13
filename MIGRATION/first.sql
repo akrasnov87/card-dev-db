@@ -5,8 +5,7 @@ insert into core.pd_roles (id, c_name, c_description, n_weight) values
 (1, 'admin', 'Администратор', 900), -- 1
 (2, 'user', 'Пользователь', 800), -- 2
 (3, 'full', 'Полный доступ', 700), -- 3
-(4, 'change', 'Только изменение', 600), -- 4
-(5, 'readonly', 'Просмотр', 500); -- 5
+(4, 'readonly', 'Просмотр', 600); -- 4
 
 insert into core.pd_users (id, c_login, c_password) values(-1, 'anonymous', ''); -- -1
 insert into core.pd_users (id, c_login, c_password) values
@@ -16,7 +15,7 @@ insert into core.pd_accesses (f_role, c_function, b_deletable, b_creatable, b_ed
 values (1, 'PN.*', true, true, true, false),
 (2, 'PN.*', false, false, false, false),
 (3, 'PN.*', true, true, true, false),
-(4, 'PN.*', false, false, true, false);
+(4, 'PN.*', false, false, false, false);
 
 
 insert into core.pd_userinroles (f_user, f_role) 

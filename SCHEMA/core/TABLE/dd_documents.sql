@@ -1,72 +1,112 @@
 CREATE TABLE core.dd_documents (
 	id uuid DEFAULT public.uuid_generate_v4() NOT NULL,
-	n_number integer NOT NULL,
-	c_fio text NOT NULL,
-	d_birthday date NOT NULL,
-	n_year smallint NOT NULL,
-	c_document text NOT NULL,
-	c_address text NOT NULL,
-	d_date timestamp with time zone NOT NULL,
-	c_time text NOT NULL,
-	c_intent text NOT NULL,
-	c_account text NOT NULL,
-	c_accept text,
-	c_earth text,
-	d_take_off_solution date,
-	d_take_off_message date,
+	ba_foto bytea,
+	c_first_name text,
+	c_last_name text,
+	c_middle_name text,
+	d_barthday date,
+	c_city_reg text,
+	c_street_reg text,
+	c_house_reg text,
+	c_premise_reg text,
+	c_city_life text,
+	c_street_life text,
+	c_house_life text,
+	c_premise_life text,
+	c_education text,
+	c_work_place text,
+	c_biografy text,
+	b_administrative boolean,
+	b_criminal boolean,
+	"с_arrest" text,
+	d_notify date,
+	c_target text,
+	c_form_event text,
+	c_tag text,
+	n_count_before integer,
+	c_time_place_before text,
+	c_notify_result text,
+	c_time_place_after text,
+	n_count_after integer,
+	c_show_material text,
+	"с_violation" text,
 	c_notice text,
 	f_user integer NOT NULL,
-	jb_child jsonb,
 	sn_delete boolean NOT NULL,
-	c_import_doc text,
-	c_import_warning text
+	dx_created timestamp with time zone DEFAULT now()
 );
 
 ALTER TABLE core.dd_documents OWNER TO mobnius;
 
 COMMENT ON COLUMN core.dd_documents.id IS 'Идентификатор';
 
-COMMENT ON COLUMN core.dd_documents.n_number IS 'Номер';
+COMMENT ON COLUMN core.dd_documents.ba_foto IS 'Фото';
 
-COMMENT ON COLUMN core.dd_documents.c_fio IS 'Фамилия, Имя, Отчество заявителя';
+COMMENT ON COLUMN core.dd_documents.c_first_name IS 'Фамилия';
 
-COMMENT ON COLUMN core.dd_documents.d_birthday IS 'Дата рождения';
+COMMENT ON COLUMN core.dd_documents.c_last_name IS 'Имя';
 
-COMMENT ON COLUMN core.dd_documents.n_year IS 'Возраст на момент постановки';
+COMMENT ON COLUMN core.dd_documents.c_middle_name IS 'Отчество';
 
-COMMENT ON COLUMN core.dd_documents.c_document IS 'Реквизиты документа, удостоверяющего личность';
+COMMENT ON COLUMN core.dd_documents.d_barthday IS 'Дата рождения';
 
-COMMENT ON COLUMN core.dd_documents.c_address IS 'Адрес, телефон';
+COMMENT ON COLUMN core.dd_documents.c_city_reg IS 'Город (адрес регистрации)';
 
-COMMENT ON COLUMN core.dd_documents.d_date IS 'Дата подачи заявления';
+COMMENT ON COLUMN core.dd_documents.c_street_reg IS 'Улица (адрес регистрации)';
 
-COMMENT ON COLUMN core.dd_documents.c_time IS 'Время подачи заявления';
+COMMENT ON COLUMN core.dd_documents.c_house_reg IS 'Дом (адрес регистрации)';
 
-COMMENT ON COLUMN core.dd_documents.c_intent IS 'Цель использования земельного участка';
+COMMENT ON COLUMN core.dd_documents.c_premise_reg IS 'Квартира (адрес регистрации)';
 
-COMMENT ON COLUMN core.dd_documents.c_account IS 'Постановление о постановке на учет';
+COMMENT ON COLUMN core.dd_documents.c_city_life IS 'Город (адрес проживания)';
 
-COMMENT ON COLUMN core.dd_documents.c_accept IS 'Дата и номер принятия решения';
+COMMENT ON COLUMN core.dd_documents.c_street_life IS 'Улица (адрес проживания)';
 
-COMMENT ON COLUMN core.dd_documents.c_earth IS 'Кадастровй номер земельного участка';
+COMMENT ON COLUMN core.dd_documents.c_house_life IS 'Дом (адрес проживания)';
 
-COMMENT ON COLUMN core.dd_documents.d_take_off_solution IS 'Решение о снятии с учета';
+COMMENT ON COLUMN core.dd_documents.c_premise_life IS 'Квартира (адрес проживания)';
 
-COMMENT ON COLUMN core.dd_documents.d_take_off_message IS 'Сообщение заявителю о снятии с учета';
+COMMENT ON COLUMN core.dd_documents.c_education IS 'Образование';
+
+COMMENT ON COLUMN core.dd_documents.c_work_place IS 'Место работы';
+
+COMMENT ON COLUMN core.dd_documents.c_biografy IS 'Биографическая информация';
+
+COMMENT ON COLUMN core.dd_documents.b_administrative IS 'Административная ответственность';
+
+COMMENT ON COLUMN core.dd_documents.b_criminal IS 'Уголовная ответственность';
+
+COMMENT ON COLUMN core.dd_documents."с_arrest" IS 'Задержание';
+
+COMMENT ON COLUMN core.dd_documents.d_notify IS 'Уведомления';
+
+COMMENT ON COLUMN core.dd_documents.c_target IS 'Цель';
+
+COMMENT ON COLUMN core.dd_documents.c_form_event IS 'Форма проведения';
+
+COMMENT ON COLUMN core.dd_documents.c_tag IS 'Метка';
+
+COMMENT ON COLUMN core.dd_documents.n_count_before IS 'Заявленное количество участников';
+
+COMMENT ON COLUMN core.dd_documents.c_time_place_before IS 'Место и время проведения';
+
+COMMENT ON COLUMN core.dd_documents.c_notify_result IS 'Результаты рассмотрения уведомления';
+
+COMMENT ON COLUMN core.dd_documents.c_time_place_after IS 'Место и время проведения';
+
+COMMENT ON COLUMN core.dd_documents.n_count_after IS 'Принятое количество участников';
+
+COMMENT ON COLUMN core.dd_documents.c_show_material IS 'Средства наглядной агитации';
+
+COMMENT ON COLUMN core.dd_documents."с_violation" IS 'Нарушения';
 
 COMMENT ON COLUMN core.dd_documents.c_notice IS 'Примечание';
 
 COMMENT ON COLUMN core.dd_documents.f_user IS 'Пользователь';
 
-COMMENT ON COLUMN core.dd_documents.jb_child IS 'Вложения';
+COMMENT ON COLUMN core.dd_documents.sn_delete IS 'Признак удаленности';
 
-COMMENT ON COLUMN core.dd_documents.c_import_doc IS 'Документ из которого импортировались данные';
-
-COMMENT ON COLUMN core.dd_documents.c_import_warning IS 'Замечания после импорта';
-
-COMMENT ON COLUMN core.dd_documents.c_import_doc IS 'Документ из которого импортировались данные';
-
-COMMENT ON COLUMN core.dd_documents.c_import_warning IS 'Замечания после импорта';
+COMMENT ON COLUMN core.dd_documents.dx_created IS 'Дата создания';
 
 --------------------------------------------------------------------------------
 
