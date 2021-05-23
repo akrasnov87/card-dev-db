@@ -3,7 +3,7 @@ CREATE TABLE core.dd_documents (
 	c_first_name text,
 	c_last_name text,
 	c_middle_name text,
-	d_barthday date,
+	d_birthday date,
 	c_city_reg text,
 	c_street_reg text,
 	c_house_reg text,
@@ -17,7 +17,7 @@ CREATE TABLE core.dd_documents (
 	c_biografy text,
 	b_administrative boolean,
 	b_criminal boolean,
-	"с_arrest" text,
+	c_arrest text,
 	d_notify date,
 	c_target text,
 	c_form_event text,
@@ -28,7 +28,7 @@ CREATE TABLE core.dd_documents (
 	c_time_place_after text,
 	n_count_after integer,
 	c_show_material text,
-	"с_violation" text,
+	c_violation text,
 	c_notice text,
 	f_user integer NOT NULL,
 	sn_delete boolean NOT NULL,
@@ -45,7 +45,7 @@ COMMENT ON COLUMN core.dd_documents.c_last_name IS 'Имя';
 
 COMMENT ON COLUMN core.dd_documents.c_middle_name IS 'Отчество';
 
-COMMENT ON COLUMN core.dd_documents.d_barthday IS 'Дата рождения';
+COMMENT ON COLUMN core.dd_documents.d_birthday IS 'Дата рождения';
 
 COMMENT ON COLUMN core.dd_documents.c_city_reg IS 'Город (адрес регистрации)';
 
@@ -73,7 +73,7 @@ COMMENT ON COLUMN core.dd_documents.b_administrative IS 'Администрат�
 
 COMMENT ON COLUMN core.dd_documents.b_criminal IS 'Уголовная ответственность';
 
-COMMENT ON COLUMN core.dd_documents."с_arrest" IS 'Задержание';
+COMMENT ON COLUMN core.dd_documents.c_arrest IS 'Задержание';
 
 COMMENT ON COLUMN core.dd_documents.d_notify IS 'Уведомления';
 
@@ -95,7 +95,7 @@ COMMENT ON COLUMN core.dd_documents.n_count_after IS 'Принятое коли�
 
 COMMENT ON COLUMN core.dd_documents.c_show_material IS 'Средства наглядной агитации';
 
-COMMENT ON COLUMN core.dd_documents."с_violation" IS 'Нарушения';
+COMMENT ON COLUMN core.dd_documents.c_violation IS 'Нарушения';
 
 COMMENT ON COLUMN core.dd_documents.c_notice IS 'Примечание';
 
