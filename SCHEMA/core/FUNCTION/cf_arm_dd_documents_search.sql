@@ -10,7 +10,6 @@ CREATE OR REPLACE FUNCTION core.cf_arm_dd_documents_search(_txt text) RETURNS TA
 BEGIN
 	return query 
 	select d.id,
-	    d.n_number,
 	    d.c_first_name,
 	    d.c_last_name,
 	    d.c_middle_name,

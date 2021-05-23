@@ -1,6 +1,5 @@
 CREATE TABLE core.dd_documents (
 	id uuid DEFAULT public.uuid_generate_v4() NOT NULL,
-	ba_foto bytea,
 	c_first_name text,
 	c_last_name text,
 	c_middle_name text,
@@ -39,8 +38,6 @@ CREATE TABLE core.dd_documents (
 ALTER TABLE core.dd_documents OWNER TO mobnius;
 
 COMMENT ON COLUMN core.dd_documents.id IS 'Идентификатор';
-
-COMMENT ON COLUMN core.dd_documents.ba_foto IS 'Фото';
 
 COMMENT ON COLUMN core.dd_documents.c_first_name IS 'Фамилия';
 
