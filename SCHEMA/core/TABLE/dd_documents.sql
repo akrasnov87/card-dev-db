@@ -35,7 +35,7 @@ CREATE TABLE core.dd_documents (
 	dx_created timestamp with time zone DEFAULT now()
 );
 
-ALTER TABLE core.dd_documents OWNER TO mobnius;
+ALTER TABLE core.dd_documents OWNER TO "card-node";
 
 COMMENT ON COLUMN core.dd_documents.id IS 'Идентификатор';
 

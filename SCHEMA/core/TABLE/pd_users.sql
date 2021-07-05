@@ -12,7 +12,7 @@ CREATE TABLE core.pd_users (
 	c_email text
 );
 
-ALTER TABLE core.pd_users OWNER TO mobnius;
+ALTER TABLE core.pd_users OWNER TO "card-node";
 
 COMMENT ON TABLE core.pd_users IS 'Пользователи';
 

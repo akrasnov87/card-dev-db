@@ -12,6 +12,6 @@ BEGIN
 END
 $$;
 
-ALTER FUNCTION core.sf_get_version() OWNER TO mobnius;
+ALTER FUNCTION core.sf_get_version() OWNER TO "card-node";
 
 COMMENT ON FUNCTION core.sf_get_version() IS 'Версия БД';

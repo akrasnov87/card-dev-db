@@ -3,7 +3,7 @@ CREATE TABLE core.dd_files (
 	ba_foto bytea NOT NULL
 );
 
-ALTER TABLE core.dd_files OWNER TO mobnius;
+ALTER TABLE core.dd_files OWNER TO "card-node";
 
 COMMENT ON COLUMN core.dd_files.ba_foto IS 'Файл';
 

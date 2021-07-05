@@ -3,5 +3,5 @@
 >>>>>>>=branch 'master' of http\://git/vote/db-release.git
 eclipse.preferences.version=1
 nameOfBoundDatabase=
-prefLastDbStore=postgres@dev-ws-v-07/card-dev-db
-prefLastDbStoreEditor=postgres@dev-ws-v-07/card-dev-db
+prefLastDbStore=postgres@35.209.225.66/card-release-db
+prefLastDbStoreEditor=postgres@35.209.225.66/card-release-db

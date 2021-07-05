@@ -21,6 +21,6 @@ BEGIN
 END
 $$;
 
-ALTER FUNCTION core.sf_create_user(_login text, _password text, _claims text, _f_subdivision integer) OWNER TO mobnius;
+ALTER FUNCTION core.sf_create_user(_login text, _password text, _claims text, _f_subdivision integer) OWNER TO "card-node";
 
 COMMENT ON FUNCTION core.sf_create_user(_login text, _password text, _claims text, _f_subdivision integer) IS 'Создание пользователя с определенными ролями';
