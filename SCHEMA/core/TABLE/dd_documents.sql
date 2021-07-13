@@ -19,14 +19,14 @@ CREATE TABLE core.dd_documents (
 	b_criminal boolean,
 	c_arrest text,
 	f_user integer NOT NULL,
-	sn_delete boolean NOT NULL,
+	sn_delete boolean DEFAULT false,
 	dx_created timestamp with time zone DEFAULT now(),
 	c_soc_link text,
 	c_tag text,
 	c_notice text
 );
 
-ALTER TABLE core.dd_documents OWNER TO "card";
+ALTER TABLE core.dd_documents OWNER TO card;
 
 COMMENT ON COLUMN core.dd_documents.id IS 'Идентификатор';
 

@@ -14,10 +14,10 @@ CREATE TABLE core.pd_accesses (
 	sn_delete boolean DEFAULT false NOT NULL
 );
 
-ALTER TABLE core.pd_accesses OWNER TO "card";
+ALTER TABLE core.pd_accesses OWNER TO card;
 
-REVOKE ALL ON TABLE core.pd_accesses FROM "card";
-GRANT SELECT ON TABLE core.pd_accesses TO "card" WITH GRANT OPTION;
+REVOKE ALL ON TABLE core.pd_accesses FROM card;
+GRANT SELECT ON TABLE core.pd_accesses TO card WITH GRANT OPTION;
 
 COMMENT ON TABLE core.pd_accesses IS 'Права доступа';
 

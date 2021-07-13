@@ -13,7 +13,7 @@ CREATE TABLE core.dd_events (
 	c_show_material text,
 	c_violation text,
 	f_user integer NOT NULL,
-	sn_delete boolean NOT NULL,
+	sn_delete boolean DEFAULT false,
 	dx_created timestamp with time zone DEFAULT now()
 );
 
