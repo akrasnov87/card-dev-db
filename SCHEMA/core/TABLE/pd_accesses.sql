@@ -14,10 +14,10 @@ CREATE TABLE core.pd_accesses (
 	sn_delete boolean DEFAULT false NOT NULL
 );
 
-ALTER TABLE core.pd_accesses OWNER TO "card-node";
+ALTER TABLE core.pd_accesses OWNER TO "card";
 
-REVOKE ALL ON TABLE core.pd_accesses FROM "card-node";
-GRANT SELECT ON TABLE core.pd_accesses TO "card-node" WITH GRANT OPTION;
+REVOKE ALL ON TABLE core.pd_accesses FROM "card";
+GRANT SELECT ON TABLE core.pd_accesses TO "card" WITH GRANT OPTION;
 
 COMMENT ON TABLE core.pd_accesses IS 'Права доступа';
 
@@ -70,8 +70,3 @@ ALTER TABLE core.pd_accesses
 
 ALTER TABLE core.pd_accesses
 	ADD CONSTRAINT pd_accesses_f_role FOREIGN KEY (f_role) REFERENCES core.pd_roles(id);
-
---------------------------------------------------------------------------------
-
-ALTER TABLE core.pd_accesses
-	ADD CONSTRAINT pd_accesses_f_user FOREIGN KEY (f_user) REFERENCES core.pd_users(id);

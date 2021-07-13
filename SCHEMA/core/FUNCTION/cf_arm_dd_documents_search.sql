@@ -20,16 +20,17 @@ BEGIN
 	    d.sn_delete,
 		d.c_tag
 	from core.dd_documents as d
+	inner join core.dd_events as e on d.id = e.f_document
 	where d.c_first_name ilike '%'||_txt||'%' or d.c_last_name ilike '%'||_txt||'%' or d.c_middle_name ilike '%'||_txt||'%'
 	or d.c_city_reg ilike '%'||_txt||'%' or d.c_street_reg ilike '%'||_txt||'%' or d.c_house_reg ilike '%'||_txt||'%' or d.c_premise_reg ilike '%'||_txt||'%' 
 	or d.c_city_life ilike '%'||_txt||'%' or d.c_street_life ilike '%'||_txt||'%' or d.c_house_life ilike '%'||_txt||'%' or d.c_premise_life ilike '%'||_txt||'%' 
 	or d.c_education ilike '%'||_txt||'%' or d.c_work_place ilike '%'||_txt||'%' or d.c_biografy ilike '%'||_txt||'%' or d.c_arrest ilike '%'||_txt||'%'
-	or d.c_target ilike '%'||_txt||'%' or d.c_form_event ilike '%'||_txt||'%' or d.c_time_place_before ilike '%'||_txt||'%' or d.c_notify_result ilike '%'||_txt||'%'
-	or d.c_time_place_after ilike '%'||_txt||'%' or d.c_show_material ilike '%'||_txt||'%' or d.c_violation ilike '%'||_txt||'%' or d.c_notice ilike '%'||_txt||'%'
-	order by d.dx_created desc;
+	or e.c_target ilike '%'||_txt||'%' or e.c_time_place_before ilike '%'||_txt||'%' or e.c_notify_result ilike '%'||_txt||'%'
+	or e.c_time_place_after ilike '%'||_txt||'%' or e.c_show_material ilike '%'||_txt||'%' or e.c_violation ilike '%'||_txt||'%' or e.c_notice ilike '%'||_txt||'%'
+	order by d.dx_created desc, e.dx_created desc;
 END
 $$;
 
-ALTER FUNCTION core.cf_arm_dd_documents_search(_txt text) OWNER TO "card-node";
+ALTER FUNCTION core.cf_arm_dd_documents_search(_txt text) OWNER TO "card";
 
 COMMENT ON FUNCTION core.cf_arm_dd_documents_search(_txt text) IS 'Поиск документа';

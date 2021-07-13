@@ -18,24 +18,15 @@ CREATE TABLE core.dd_documents (
 	b_administrative boolean,
 	b_criminal boolean,
 	c_arrest text,
-	d_notify date,
-	c_target text,
-	c_form_event text,
-	c_tag text,
-	n_count_before integer,
-	c_time_place_before text,
-	c_notify_result text,
-	c_time_place_after text,
-	n_count_after integer,
-	c_show_material text,
-	c_violation text,
-	c_notice text,
 	f_user integer NOT NULL,
 	sn_delete boolean NOT NULL,
-	dx_created timestamp with time zone DEFAULT now()
+	dx_created timestamp with time zone DEFAULT now(),
+	c_soc_link text,
+	c_tag text,
+	c_notice text
 );
 
-ALTER TABLE core.dd_documents OWNER TO "card-node";
+ALTER TABLE core.dd_documents OWNER TO "card";
 
 COMMENT ON COLUMN core.dd_documents.id IS 'Идентификатор';
 
@@ -75,35 +66,13 @@ COMMENT ON COLUMN core.dd_documents.b_criminal IS 'Уголовная ответ
 
 COMMENT ON COLUMN core.dd_documents.c_arrest IS 'Задержание';
 
-COMMENT ON COLUMN core.dd_documents.d_notify IS 'Уведомления';
-
-COMMENT ON COLUMN core.dd_documents.c_target IS 'Цель';
-
-COMMENT ON COLUMN core.dd_documents.c_form_event IS 'Форма проведения';
-
-COMMENT ON COLUMN core.dd_documents.c_tag IS 'Метка';
-
-COMMENT ON COLUMN core.dd_documents.n_count_before IS 'Заявленное количество участников';
-
-COMMENT ON COLUMN core.dd_documents.c_time_place_before IS 'Место и время проведения';
-
-COMMENT ON COLUMN core.dd_documents.c_notify_result IS 'Результаты рассмотрения уведомления';
-
-COMMENT ON COLUMN core.dd_documents.c_time_place_after IS 'Место и время проведения';
-
-COMMENT ON COLUMN core.dd_documents.n_count_after IS 'Принятое количество участников';
-
-COMMENT ON COLUMN core.dd_documents.c_show_material IS 'Средства наглядной агитации';
-
-COMMENT ON COLUMN core.dd_documents.c_violation IS 'Нарушения';
-
-COMMENT ON COLUMN core.dd_documents.c_notice IS 'Примечание';
-
 COMMENT ON COLUMN core.dd_documents.f_user IS 'Пользователь';
 
 COMMENT ON COLUMN core.dd_documents.sn_delete IS 'Признак удаленности';
 
 COMMENT ON COLUMN core.dd_documents.dx_created IS 'Дата создания';
+
+COMMENT ON COLUMN core.dd_documents.c_soc_link IS 'Ссылки на социальные сети';
 
 --------------------------------------------------------------------------------
 

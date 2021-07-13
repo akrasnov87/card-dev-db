@@ -12,7 +12,7 @@ CREATE TABLE core.pd_users (
 	c_email text
 );
 
-ALTER TABLE core.pd_users OWNER TO "card-node";
+ALTER TABLE core.pd_users OWNER TO "card";
 
 COMMENT ON TABLE core.pd_users IS 'Пользователи';
 

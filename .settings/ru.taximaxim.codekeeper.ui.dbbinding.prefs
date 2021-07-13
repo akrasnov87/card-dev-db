@@ -5,3 +5,4 @@ eclipse.preferences.version=1
 nameOfBoundDatabase=
 prefLastDbStore=postgres@35.209.225.66/card-release-db
 prefLastDbStoreEditor=postgres@35.209.225.66/card-release-db
+prefLastDirection=false

@@ -12,6 +12,6 @@ BEGIN
 END
 $$;
 
-ALTER FUNCTION core.sf_get_version() OWNER TO "card-node";
+ALTER FUNCTION core.sf_get_version() OWNER TO "card";
 
 COMMENT ON FUNCTION core.sf_get_version() IS 'Версия БД';

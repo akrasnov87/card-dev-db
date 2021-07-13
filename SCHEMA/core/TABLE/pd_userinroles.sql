@@ -5,7 +5,7 @@ CREATE TABLE core.pd_userinroles (
 	sn_delete boolean DEFAULT false NOT NULL
 );
 
-ALTER TABLE core.pd_userinroles OWNER TO "card-node";
+ALTER TABLE core.pd_userinroles OWNER TO "card";
 
 COMMENT ON TABLE core.pd_userinroles IS 'Пользователи в ролях';
 

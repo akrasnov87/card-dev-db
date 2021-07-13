@@ -9,7 +9,7 @@ CREATE TABLE core.cs_setting_types (
 	b_disabled boolean DEFAULT false NOT NULL
 );
 
-ALTER TABLE core.cs_setting_types OWNER TO "card-node";
+ALTER TABLE core.cs_setting_types OWNER TO "card";
 
 COMMENT ON TABLE core.cs_setting_types IS 'Тип настройки';
 

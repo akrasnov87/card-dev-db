@@ -27,6 +27,6 @@ EXCEPTION
 END;
 $$;
 
-ALTER FUNCTION core.cft_log_action() OWNER TO "card-node";
+ALTER FUNCTION core.cft_log_action() OWNER TO "card";
 
 COMMENT ON FUNCTION core.cft_log_action() IS 'Триггер. Процедура логирования действия пользователя';

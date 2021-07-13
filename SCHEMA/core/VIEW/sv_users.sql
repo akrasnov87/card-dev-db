@@ -16,6 +16,6 @@ CREATE VIEW core.sv_users AS
    FROM core.pd_users u
   WHERE (u.sn_delete = false);
 
-ALTER VIEW core.sv_users OWNER TO "card-node";
+ALTER VIEW core.sv_users OWNER TO "card";
 
 COMMENT ON VIEW core.sv_users IS 'Системный список пользователей';

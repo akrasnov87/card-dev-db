@@ -24,6 +24,6 @@ BEGIN
 END; 
 $$;
 
-ALTER FUNCTION core.pf_accesses(n_user_id integer) OWNER TO "card-node";
+ALTER FUNCTION core.pf_accesses(n_user_id integer) OWNER TO "card";
 
 COMMENT ON FUNCTION core.pf_accesses(n_user_id integer) IS 'Системная функция. Получение прав доступа для пользователя. Используется NodeJS';

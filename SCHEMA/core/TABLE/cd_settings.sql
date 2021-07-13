@@ -10,7 +10,7 @@ CREATE TABLE core.cd_settings (
 	f_role integer
 );
 
-ALTER TABLE core.cd_settings OWNER TO "card-node";
+ALTER TABLE core.cd_settings OWNER TO "card";
 
 COMMENT ON TABLE core.cd_settings IS 'Настройки';
 

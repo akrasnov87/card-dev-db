@@ -16,6 +16,6 @@ BEGIN
 END
 $$;
 
-ALTER FUNCTION core.cf_arm_dd_documents_history(_id uuid) OWNER TO "card-node";
+ALTER FUNCTION core.cf_arm_dd_documents_history(_id uuid) OWNER TO "card";
 
-COMMENT ON FUNCTION core.cf_arm_dd_documents_history(_id uuid) IS 'История изменнения документа';
+COMMENT ON FUNCTION core.cf_arm_dd_documents_history(_id uuid) IS 'История изменения документа';

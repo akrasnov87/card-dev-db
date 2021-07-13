@@ -34,6 +34,6 @@ BEGIN
 END
 $$;
 
-ALTER FUNCTION core.cf_mui_sd_table_change(_fn_user integer, _c_version text) OWNER TO "card-node";
+ALTER FUNCTION core.cf_mui_sd_table_change(_fn_user integer, _c_version text) OWNER TO "card";
 
 COMMENT ON FUNCTION core.cf_mui_sd_table_change(_fn_user integer, _c_version text) IS 'Получение списка изменений для пользователя';

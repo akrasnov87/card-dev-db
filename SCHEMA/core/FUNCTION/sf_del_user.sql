@@ -12,6 +12,6 @@ BEGIN
 END
 $$;
 
-ALTER FUNCTION core.sf_del_user(_id integer) OWNER TO "card-node";
+ALTER FUNCTION core.sf_del_user(_id integer) OWNER TO "card";
 
 COMMENT ON FUNCTION core.sf_del_user(_id integer) IS 'Удаление пользователя';

@@ -4,7 +4,7 @@ CREATE TABLE core.sd_table_change_ref (
 	c_table_name_ref text NOT NULL
 );
 
-ALTER TABLE core.sd_table_change_ref OWNER TO "card-node";
+ALTER TABLE core.sd_table_change_ref OWNER TO "card";
 
 COMMENT ON TABLE core.sd_table_change_ref IS 'Зависимость таблиц состояний';
 

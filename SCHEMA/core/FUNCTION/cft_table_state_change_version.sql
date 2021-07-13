@@ -26,6 +26,6 @@ BEGIN
 END
 $$;
 
-ALTER FUNCTION core.cft_table_state_change_version() OWNER TO "card-node";
+ALTER FUNCTION core.cft_table_state_change_version() OWNER TO "card";
 
 COMMENT ON FUNCTION core.cft_table_state_change_version() IS 'Триггер. Обновление справочной версии';

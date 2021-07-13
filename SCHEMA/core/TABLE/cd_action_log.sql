@@ -8,7 +8,7 @@ CREATE TABLE core.cd_action_log (
 	d_date timestamp with time zone
 );
 
-ALTER TABLE core.cd_action_log OWNER TO "card-node";
+ALTER TABLE core.cd_action_log OWNER TO "card";
 
 COMMENT ON TABLE core.cd_action_log IS 'Логирование действий пользователей с данными. Полная информация';
 

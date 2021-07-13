@@ -11,6 +11,6 @@ var birthday = '2021-01-17';
 	return newVersion;
 $$;
 
-ALTER FUNCTION core.sf_build_version(status integer) OWNER TO "card-node";
+ALTER FUNCTION core.sf_build_version(status integer) OWNER TO "card";
 
 COMMENT ON FUNCTION core.sf_build_version(status integer) IS 'Генерация версии БД';
